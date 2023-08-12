@@ -13,6 +13,18 @@
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.1",
-    "astro": "^2.10.3"
+    "@astrojs/solid-js": "^2.2.0",
+    "@solidjs/router": "^0.8.3",
+    "@unocss/astro": "^0.55.0",
+    "@unocss/preset-wind": "^0.55.0",
+    "astro": "^2.10.3",
+    "dayjs": "^1.11.9",
+    "sass": "^1.65.1",
+    "solid-js": "^1.4.3",
+    "unocss": "^0.55.0"
+  },
+  "devDependencies": {
+    "@unocss/preset-web-fonts": "^0.55.0",
+    "@unocss/reset": "^0.55.0"
   }
 }
