@@ -1,6 +1,5 @@
 <template lang="pug">
-.bg-blank
-    ArticleContent
+ArticleContent
 </template>
 <script lang="ts" setup>
 const route = useRoute()

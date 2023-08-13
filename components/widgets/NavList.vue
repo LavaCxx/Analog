@@ -1,23 +1,20 @@
 <template lang="pug">
-.flex.text-secondary.text-xl.gap-x-2
-  .py-3.px-2.h-full.flex.justify-center.align-center
-    .bg-main.w-1.relative(ref="handleBar")
-      .handle.transition-all.ease-out.rounded-sm.absolute.w-4.h-7.bg-primary.cursor-grab(
-        class="left-1/2 translate-x--1/2 translate-y--1/2 shadow-[0px_0px_2px_0px_var(--desc-color)]",
-        :style="{ top: `${topValue}%` }",
-        @mousedown="onHold"
-        v-if="navList.length>2"
-      )
-  ul.flex.flex-col.gap-y-4.w-16.text-right
+.flex.text-sub.text-xl.gap-x-2
+  .py-2.px-2.h-full.flex.justify-center.align-center
+    .bg-blank.w-6.relative.flex.flex-col.justify-between.items-end(ref="scaleBar")
+        .w-3.h-3px.bg-sub(v-for="item in navList.length" :key="item")
+        .w-5.h-2px.bg-primary.absolute.handle.transition-all.opacity-95(:style="{'top':`calc(${topValue}%`}")
+  ul.flex.flex-col.gap-y-4.w-16.text-right.select-none
     li(
       v-for="(item, index) in navList",
       :key="item.title",
       @click="navigate(index)"
-      :class="[currentPageIndex===index&&'text-primary font-bold']"
+      :class="[currentPageIndex===index&&'text-main font-bold']"
     )
       NuxtLink(:to="item.link") {{ item.title }}
 </template>
 <script lang="ts" setup>
+const scaleBar=ref();
 const router = useRouter();
 const navList = ref([
   {
@@ -60,63 +57,13 @@ const currentPage = computed(() => {
 });
 // 跳转
 const navigate = (index: number) => {
+    console.log(scaleBar)
+    const {offsetHeight}=scaleBar.value
   currentPageIndex.value = index;
-  topValue.value = index * step.value;
+  topValue.value = (index * step.value)*offsetHeight/(offsetHeight+2);
 };
-// 滑块移动
-const onHold = (e: MouseEvent) => {
-  isMoving.value = true;
-  mouseY.value = e.clientY;
-  document.addEventListener("mousemove", onMove);
-  document.addEventListener("mouseup", onUnHold);
-};
-const onMove = (e: MouseEvent) => {
-  if (!isMoving.value) return;
-  const { offsetHeight, offsetTop } = handleBar.value;
-  let offsetY = +(((e.clientY - offsetTop) / offsetHeight) * 100).toFixed(2);
-  topValue.value = Math.max(Math.min(offsetY, 100), 0);
-};
-const onUnHold = (e: MouseEvent) => {
-  document.removeEventListener("mousemove", onMove);
-  document.removeEventListener("mouseup", onUnHold);
-  isMoving.value = false;
-  topValue.value = findNearestSegment(step.value, topValue.value);
-  let newIndex=Math.floor(topValue.value / step.value)
-  if(newIndex!==currentPageIndex.value){
-    console.log('currentPage.value',currentPage.value)
-    navigate(newIndex);
-    router.push(navList.value[newIndex].link)
-      
-      
-  }
   
-};
-// 寻找最近分段
-function findNearestSegment(step: number, value: number) {
-  let segments = [0];
-  while ((segments.at(-1) || 0) + step <= 100) {
-    segments.push((segments.at(-1) || 0) + step);
-  }
-  let nearestSegment = null;
-  let minDistance = Number.MAX_SAFE_INTEGER;
-  for (let i = 0; i < segments.length; i++) {
-    const distance = Math.abs(value - segments[i]);
-    if (distance < minDistance) {
-      minDistance = distance;
-      nearestSegment = segments[i];
-    }
-  }
-  return nearestSegment || 0;
-}
 </script>
 <style lang="scss" scoped>
-.handle {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    var(--accent-color),
-    var(--accent-color) 6px,
-    var(--primary-color) 6px,
-    var(--primary-color) 8px
-  );
-}
+
 </style>

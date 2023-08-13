@@ -2,11 +2,11 @@
     font-family: 'Lato', sans-serif;
 }
 .prose pre{
-    background-color: var(--adorn-color);
+    background-color: var(--desc-color);
 }
 .overflow-auto,.overflow-y-auto{
     &::-webkit-scrollbar{
         width: 4px;
-        background-color: var(--blank-color);
+        background-color: var(--desc-color);
     }
 }

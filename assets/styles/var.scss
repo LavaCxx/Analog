@@ -1,24 +1,24 @@
-:root{
-    --blank-color:#cfd8dd;
-    --primary-color:#7a93bd;
-    --secondary-color:#6b7e99;
+:root {
+  --base-color: #c5c1b6;
+  --blank-color: #fff6e1;
+  --primary-color: #f86d66;
+  --secondary-color: #f2a04a;
 
-    --accent-color:#4a6fa5;
+  --accent-color: #f4dc58;
 
-    --desc-color:#6b6b6b;
-    --text-color:#414141;
-    --adorn-color:#c0d6df;
-    --notice-color:#854442;
+  --desc-color: #cfc9bb;
+
+  --main-color: #625d4e;
+  --sub-color: #686253;
 }
-:root.dark{
-  --blank-color: #272d33;      /* 背景色 */
-  --primary-color: #54688d;    /* 主要色 */
-  --secondary-color: #6b7e99;  /* 次要色 */
 
-  --accent-color: #7899bd;     /* 强调色 */
-
-  --desc-color: #8a8a8a;       /* 描述文字颜色 */
-  --text-color: #d1d1d1;       /* 主要文字颜色 */
-  --adorn-color: #7a9eb5;      /* 装饰性颜色 */
-  --notice-color: #a57774;     /* 提醒色 */
+:root.dark {
+  --base-color: #1f2937;
+  --blank-color: #2a3748;
+  --primary-color: #627d98;
+  --secondary-color: #768ea6;
+  --accent-color: #7c8e70;
+  --desc-color: #6b6b6b;
+  --main-color: #b0bcc8;
+  --sub-color: #d1d5db;
 }

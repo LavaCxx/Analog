@@ -34,14 +34,14 @@ export default defineConfig({
     ],
     theme: {
         colors: {
+            'base': 'var(--base-color)',
             'blank': 'var(--blank-color)',
             'primary': 'var(--primary-color)',
             'secondary': 'var(--secondary-color)',
             'accent': 'var(--accent-color)',
             'desc': 'var(--desc-color)',
-            'main': 'var(--text-color)',
-            'adorn': 'var(--adorn-color)',
-            'notice': 'var(--notice-color)',
+            'main': 'var(--main-color)',
+            'sub': 'var(--sub-color)'
         }
     },
     rules: [
