@@ -1,7 +1,7 @@
 <template lang="pug">
 .flex.text-sub.text-xl.gap-x-2.flex-row
   .px-2.h-full.flex.justify-center.align-center
-    .scaleBar.bg-desc.w-6.relative.flex.flex-col.justify-between.items-center.rounded(class="border-[var(--blank-color)]" ref="scaleBar" :style="{'--scale-len':'calc('+step+'%)'}")
+    .scaleBar.bg-desc.w-6.relative.flex.flex-col.justify-between.items-center.rounded-l.border-r-2(class="border-[var(--main-color)]" ref="scaleBar" :style="{'--scale-len':'calc('+step+'%)'}")
         .w-4.h-2px.right-0.backdrop-opacity-10.backdrop-blur-sm.bg-primary.absolute.transition-all.opacity-95(class="shadow-[0_0px_2px_0px_var(--primary-color)] ease-[cubic-bezier(.93,1.71,.6,.77)]" :style="{'top':`calc(${topValue}%`}")
   ul.flex.flex-col.gap-y-4.w-16.text-right.select-none
     li.select-none(
@@ -78,6 +78,6 @@ onMounted(()=>{
 			background-image: repeating-linear-gradient(to bottom, #000000 10px, #000000 14px, transparent 0, transparent calc(2rem + 24px));
 			background-size: 10px 100%;
 			background-repeat: no-repeat;
-      background-position: 90% 100%;
+      background-position: calc(100% - 2px) 100%;
 }
 </style>
