@@ -1,9 +1,9 @@
 <template lang="pug">
-.flex.text-sub.text-xl.gap-x-2
-  .py-2.px-2.h-full.flex.justify-center.align-center
-    .bg-blank.w-6.relative.flex.flex-col.justify-between.items-end(ref="scaleBar")
-        .w-3.h-3px.bg-sub(v-for="item in navList.length" :key="item")
-        .w-5.h-2px.bg-primary.absolute.handle.transition-all.opacity-95(:style="{'top':`calc(${topValue}%`}")
+.flex.text-sub.text-xl.gap-x-2.flex-row-reverse
+  .px-2.h-full.flex.justify-center.align-center
+    .scaleBar.bg-desc.w-6.relative.flex.flex-col.justify-between.items-center(ref="scaleBar" :style="{'--scale-len':step+'%'}")
+        //- .w-3.h-3px.bg-sub(v-for="item in navList.length" :key="item")
+        .w-4.h-4px.left-0.backdrop-opacity-10.backdrop-blur-sm.bg-primary.absolute.transition-all.opacity-95(class="ease-[cubic-bezier(.93,1.71,.6,.77)]" :style="{'top':`calc(${topValue}%`}")
   ul.flex.flex-col.gap-y-4.w-16.text-right.select-none
     li(
       v-for="(item, index) in navList",
@@ -60,10 +60,20 @@ const navigate = (index: number) => {
     console.log(scaleBar)
     const {offsetHeight}=scaleBar.value
   currentPageIndex.value = index;
-  topValue.value = (index * step.value)*offsetHeight/(offsetHeight+2);
+  topValue.value = (index * step.value)*offsetHeight/(offsetHeight+4);
 };
   
 </script>
 <style lang="scss" scoped>
-
+.scaleBar{
+  --scale-len:10%;
+			background-image: repeating-linear-gradient(to bottom, #000000 11px, #000000 13px, transparent 0, transparent calc(2rem + 24px)),
+      repeating-linear-gradient(to bottom, #000000 5.5px, #000000 6.5px, transparent 0, transparent calc(1rem + 12px))
+			// repeating-linear-gradient(to bottom, #000000 calc(12px + 0.5rem), #000000 calc(13px + 0.5rem), transparent 0, transparent calc((1rem + 12px))),
+			// repeating-linear-gradient(to bottom, #000000 11.5px, #000000 12.5px, transparent 0, transparent calc(.5rem + 6px)),
+      ;
+			background-size: 10px 100% ,6px  100% , 4px 100% ;
+			background-repeat: no-repeat;
+			background-position: 0.05em 100%, 0.05em 100%, 0.05em 100%;
+}
 </style>
