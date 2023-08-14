@@ -1,7 +1,6 @@
 <template lang="pug">
-.flex.flex-col
-    .p-1.shadow(v-for="item in data" :key="item._id")
-        NuxtLink(:to="`/posts/${item._path}`" ) {{item.title}}
+.flex.flex-col.gap-y-4
+      ArticleItem(v-for="item in data" :key="item._id" :data="item")
 </template>
 
 <script lang="ts" setup>
@@ -9,5 +8,5 @@ const { data, pending, error, refresh } = await useAsyncData(
   'content',
   () => queryContent('/').find()
 )
-console.log('data',data,pending,error,refresh)
+console.log('data',data.value)
 </script>

@@ -1,12 +1,27 @@
 *{
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans','Lato', sans-serif;
 }
-.prose pre{
-    background-color: var(--desc-color);
+.prose{
+    // color: var(--main-color);
+    pre{
+        background-color: var(--desc-color);
+        &::-webkit-scrollbar{
+            width: 4px;
+            height: 4px;
+            background-color: var(--blank-color);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--main-color);
+        }
+    }
 }
-.overflow-auto,.overflow-y-auto{
+.overflow-auto,.overflow-y-auto,.overflow-x-auto{
     &::-webkit-scrollbar{
         width: 4px;
-        background-color: var(--desc-color);
+        height: 4px;
+        // background-color: var(--blank-color);
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--sub-color);
     }
 }

@@ -1,6 +1,7 @@
 // uno.config.ts
 import { defineConfig, presetWebFonts, presetUno,presetTypography  } from 'unocss'
 import extractorPug from '@unocss/extractor-pug'
+import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
     extractors:[
@@ -12,11 +13,13 @@ export default defineConfig({
         presetWebFonts({
             provider: 'google', // default provider
             fonts: {
-                // these will extend the default theme
-                sans: 'Roboto',
-                mono: ['Fira Code', 'Fira Mono:400,700'],
-                // custom ones
-                lobster: 'Lobster',
+                'IBM Plex Sans':[
+                    {
+                        name: 'IBM Plex Sans',
+                        weights: ['400', '700'],
+                        italic: true,
+                    },
+                ],
                 lato: [
                     {
                         name: 'Lato',
@@ -30,7 +33,22 @@ export default defineConfig({
                 ],
             },
         }),
-        presetTypography()
+        presetIcons({
+            prefix: 'i-',
+            collections:{
+                tabler:()=>import('@iconify-json/tabler').then((i)=>i.icons as any)
+            }
+        }),
+        presetTypography({
+            cssExtend:{
+                '*':{
+                    color:'var(--main-color)'
+                },
+                'pre':{
+                    'background-color':'var(--blank-color)'
+                }
+            }
+        })
     ],
     theme: {
         colors: {
