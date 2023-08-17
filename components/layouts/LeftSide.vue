@@ -1,8 +1,10 @@
 <template lang="pug">
-.flex.flex-col.justify-center.items-end
+.flex.flex-col.justify-between.items-end.py-15
     .text-5xl.font-bold.text-main.mb-20
-        h1.user.leading-10 LAVAC
+        //- h1.user.leading-10 LAVAC
+        FlipDisplay(value="hello")
     NavList
+    .flex
 </template>
 
 <script>

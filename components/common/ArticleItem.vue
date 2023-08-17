@@ -10,7 +10,10 @@ NuxtLink.p-3.block.rounded.cursor-pointer.transition-all(class="hover:bg-desc" :
 </template>
 
 <script lang="ts" setup>
-const props=defineProps(['data'])
+import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
+
+let props=defineProps<{
+  data: MarkdownParsedContent
+}>()
 const {title,description,date,tags=[],category,_path}=props.data
-console.log(props)
 </script>
