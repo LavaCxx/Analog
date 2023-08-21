@@ -23,8 +23,8 @@ const flip = () => {
     curVal.value[0] = curVal.value[1];
   }, props.duration);
 };
-watch(props, (newVal)=>{
-    queue.push(newVal.value)
+watch(()=>props.value, (newVal)=>{
+    queue.push(newVal)
 })
 onMounted(() => {
   setInterval(() => {
@@ -37,13 +37,13 @@ onMounted(() => {
 .flip-item {
   display: inline-block;
   position: relative;
-  width: 60px;
-  height: 100px;
-  line-height: 100px;
+  width: 30px;
+  height: 50px;
+  line-height: 50px;
   border: solid 1px #000;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #fff;
-  font-size: 66px;
+  font-size: 30px;
   color: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -63,13 +63,13 @@ onMounted(() => {
   &::before {
     top: 0;
     bottom: 50%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     border-bottom: solid 1px #666;
   }
   &::after {
     top: 50%;
     bottom: 0;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
     line-height: 0;
   }
 }

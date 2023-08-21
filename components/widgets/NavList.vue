@@ -14,6 +14,7 @@
 </template>
 <script lang="ts" setup>
 const scaleBar=ref();
+const emit=defineEmits(['change'])
 const router = useRouter();
 const navList = ref([
   {
@@ -65,10 +66,12 @@ const currentPage = computed(() => {
 // 跳转
 const navigate = (index: number) => {
    setTopValue(index)
+    emit('change',navList.value[index].title)
   currentPageIndex.value = index;
 };
 onMounted(()=>{
   setTopValue(0)
+  emit('change',navList.value[0].title)
 })
 
 </script>

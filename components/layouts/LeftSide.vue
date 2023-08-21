@@ -2,14 +2,15 @@
 .flex.flex-col.justify-between.items-end.py-15
     .text-5xl.font-bold.text-main.mb-20
         //- h1.user.leading-10 LAVAC
-        FlipDisplay(value="hello")
-    NavList
+        FlipDisplay(:value="currentMenu" :num="6" :duration="60")
+    NavList(@change="changeMenu")
     .flex
 </template>
 
-<script>
-export default {
-
+<script lang="ts" setup>
+const currentMenu=ref('abc')
+const changeMenu=(menu:string)=>{
+    currentMenu.value=menu
 }
 </script>
 
