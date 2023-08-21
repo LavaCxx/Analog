@@ -1,5 +1,5 @@
 <template lang="pug">
-.text-main
+.text-main.h-full
     .flex.justify-center
         .text-5xl.text-center
             h1 Hi, there, I'm 

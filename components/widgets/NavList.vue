@@ -70,8 +70,11 @@ const navigate = (index: number) => {
   currentPageIndex.value = index;
 };
 onMounted(()=>{
-  setTopValue(0)
-  emit('change',navList.value[0].title)
+  
+  const path=router.currentRoute.value.path
+  const title=path.match(/(?<=^\/)[^\/]*/)?.[0]||''
+  setTopValue(navList.value.findIndex(item=>item.link===`/${title}`))
+  emit('change',title||navList.value[0].title)
 })
 
 </script>

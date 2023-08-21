@@ -1,5 +1,6 @@
 <template lang='pug'>
-ContentDoc(path="/friend")
+.h-full
+    ContentDoc(path="/friend")
 </template>
 
 <script>

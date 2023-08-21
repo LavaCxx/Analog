@@ -4,7 +4,7 @@ NuxtLink.p-3.block.rounded.cursor-pointer.transition-all(class="hover:bg-desc" :
     .mt-2 {{description}}
     .mt-2.text-sub.font-bold
         span C:\{{date}}
-        span \#\{{tags.join('\\')}}>
+        span \tag\{{tags.join('_')}}>
         
         
 </template>

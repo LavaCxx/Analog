@@ -1,5 +1,5 @@
 <template lang="pug">
-.py-15.px-4.overflow-y-auto.bg-desc
+.py-15.px-4.overflow-y-auto
     NuxtPage
 </template>
 

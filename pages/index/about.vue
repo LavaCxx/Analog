@@ -1,5 +1,7 @@
 <template lang="pug">
-.bg-secondary 123
+.h-full
+    ContentDoc(path="/about")
+
 </template>
 
 <script>

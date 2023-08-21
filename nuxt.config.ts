@@ -16,11 +16,14 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['@unocss/reset/tailwind.css', '~/assets/styles/base.scss', '~/assets/styles/var.scss'],
+  css: ['@unocss/reset/tailwind.css', '~/assets/styles/main.scss'],
   vite: {
     plugins: [
       Unocss()
     ]
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   components: [
     {

@@ -1,0 +1,30 @@
+.page-leave-active {
+    transition: transform .2s cubic-bezier(.46, -0.19, .97, .7), filter 0.2s cubic-bezier(.46, -0.19, .97, .7);
+    transform: translateY(100%);
+    filter: blur(2px)
+}
+
+
+.page-enter-active {
+    transform: translateY(-100%);
+    filter: blur(0px);
+    transition: transform .3s cubic-bezier(.32, .55, .24, 1.12), filter 0.3s cubic-bezier(.32, .55, .24, 1.12);
+}
+
+.page-enter-form {
+    transform: translateY(-100%);
+    filter: blur(2px)
+}
+.page-enter-to {
+    transform: translateY(0);
+    filter: blur(0px);
+}
+// .page-enter-active,
+// .page-leave-active {
+//   transition: all 0.4s;
+// }
+// .page-enter-from,
+// .page-leave-to {
+//   opacity: 0;
+//   filter: blur(1rem);
+// }
