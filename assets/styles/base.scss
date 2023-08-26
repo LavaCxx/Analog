@@ -2,6 +2,7 @@
     font-family: 'IBM Plex Sans','Lato', sans-serif;
 }
 .prose{
+    max-width: unset !important;
     // color: var(--main-color);
     pre{
         background-color: var(--desc-color);
@@ -19,9 +20,22 @@
     &::-webkit-scrollbar{
         width: 4px;
         height: 4px;
-        // background-color: var(--blank-color);
+        // background-color: var(--desc-color);
+        opacity: 0;
+        animation: scrollbarFadeIn 1s ease 1s forwards;
     }
     &::-webkit-scrollbar-thumb{
+        opacity: 0;
         background-color: var(--sub-color);
+        animation: scrollbarFadeIn 1s ease 1s forwards;
     }
+}
+@keyframes scrollbarFadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }

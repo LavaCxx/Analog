@@ -1,10 +1,8 @@
 <template lang="pug">
 .h-full
-    //- ContentDoc(path="/about")
-
+    ContentDoc(path="/about")
 </template>
 
 <script setup lang="ts">
 </script>
 
-<style>

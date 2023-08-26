@@ -1,10 +1,14 @@
 <template lang="pug">
-.text-main.h-full
+.text-main.h-full.flex.flex-col
     .flex.justify-center
         .text-5xl.text-center
             h1 Hi, there, I'm 
             h1.user.leading-10.font-bold LAVAC
-            h2.text-2xl.text-sub A humble explorer of AnyScript
+            h2.text-2xl.text-sub.mt-1 A humble explorer of AnyScript
+    Socials.my-5
+    HR
+    Latest
+
 </template>
 
 <script>

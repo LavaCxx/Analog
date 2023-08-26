@@ -36,9 +36,12 @@ export default defineConfig({
         presetIcons({
             prefix: 'i-',
             collections:{
+                mdi:()=>import('@iconify-json/mdi').then((i)=>i.icons as any),
                 tabler:()=>import('@iconify-json/tabler').then((i)=>i.icons as any)
             }
-        }),
+        },
+        
+        ),
         presetTypography({
             cssExtend:{
                 '*':{
@@ -73,6 +76,12 @@ export default defineConfig({
             /^bg-(.*)$/,
             ([, c], { theme }) => {
                 if (theme.colors[c]) return { background: theme.colors[c] }
+            }
+        ],
+        [
+            /^border-(.*)$/,
+            ([, c], { theme }) => {
+                if (theme.colors[c]) return { 'border-color': theme.colors[c] }
             }
         ],
     ]

@@ -8,5 +8,5 @@ const { data, pending, error, refresh } = await useAsyncData(
   'posts',
   () => queryContent('/posts').find()
 )
-console.log('data',data.value)
+
 </script>

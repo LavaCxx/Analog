@@ -2,7 +2,7 @@
 .flex.text-sub.text-xl.gap-x-2.flex-row
   .px-2.h-full.flex.justify-center.align-center
     .scaleBar.bg-desc.w-6.relative.flex.flex-col.justify-between.items-center.rounded-l.border-r-2(class="border-[var(--main-color)]" ref="scaleBar" :style="{'--scale-len':'calc('+step+'%)'}")
-        .w-4.h-2px.right-0.backdrop-opacity-10.backdrop-blur-sm.bg-primary.absolute.transition-all.opacity-95(class="shadow-[0_0px_2px_0px_var(--primary-color)] ease-[cubic-bezier(.93,1.71,.6,.77)]" :style="{'top':`calc(${topValue}%`}")
+        .w-4.h-2px.right-0.backdrop-opacity-10.backdrop-blur-sm.bg-primary.absolute.transition-all.opacity-95(v-show="topValue>0" class="shadow-[0_0_2px_var(--primary-color)] ease-[cubic-bezier(.93,1.71,.6,.77)]" :style="{'top':`calc(${topValue}%`}")
   ul.flex.flex-col.gap-y-4.w-16.text-right.select-none
     li.select-none(
       v-for="(item, index) in navList",
