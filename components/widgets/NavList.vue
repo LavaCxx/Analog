@@ -16,28 +16,7 @@
 const scaleBar=ref();
 const emit=defineEmits(['change'])
 const router = useRouter();
-const navList = ref([
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "Post",
-    link: "/posts",
-  },
-  {
-    title: "Memo",
-    link: "/memos",
-  },
-  {
-    title: "Friend",
-    link: "/friend",
-  },
-  {
-    title: "About",
-    link: "/about",
-  },
-]);
+const navList = useNav();
 // 鼠标点击位置
 const mouseY = ref(0);
 // 滑块ref
@@ -70,7 +49,6 @@ const navigate = (index: number) => {
   currentPageIndex.value = index;
 };
 onMounted(()=>{
-  
   const path=router.currentRoute.value.path
   const title=path.match(/(?<=^\/)[^\/]*/)?.[0]||''
   setTopValue(navList.value.findIndex(item=>item.link===`/${title}`))

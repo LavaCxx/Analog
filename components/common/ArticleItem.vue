@@ -1,5 +1,5 @@
 <template lang="pug">
-NuxtLink.p-3.block.rounded.cursor-pointer.transition-all(class="hover:bg-desc" :to="`/posts/${_path}`" )
+NuxtLink.p-3.block.rounded.cursor-pointer.transition-all(class="hover:bg-desc" :to="`${_path}`" )
     h2.font-bold.text-xl.text-main.italic {{title}}
     .mt-2 {{description}}
     .mt-2.text-sub.font-bold

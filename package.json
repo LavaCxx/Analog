@@ -20,6 +20,7 @@
     "@types/node": "^18.17.3",
     "@unocss/extractor-pug": "^0.55.0",
     "@unocss/preset-icons": "^0.55.0",
+    "@waline/client": "^2.15.6",
     "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",

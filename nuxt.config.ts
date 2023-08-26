@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['@unocss/reset/tailwind.css', '~/assets/styles/main.scss'],
+  css: ['@unocss/reset/tailwind.css', '~/assets/styles/main.scss','@waline/client/dist/waline.css'],
   vite: {
     plugins: [
       Unocss()

@@ -5,10 +5,18 @@
     MainContent
 </template>
 
-<script>
-export default {
+<script lang="ts" setup>
+definePageMeta({
+    pageTransition: {
+    name: 'slide-down',
+    mode: 'out-in'
+  },
+  middleware: 'transition'
+  
+  // or middleware: 'auth'
+})
 
-}
+
 </script>
 
 <style lang="scss">
@@ -17,3 +25,5 @@ export default {
 
 }
 </style>
+
+

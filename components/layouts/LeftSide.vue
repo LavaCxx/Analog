@@ -1,6 +1,6 @@
 <template lang="pug">
-.flex.flex-col.justify-between.items-end.py-15
-    .text-5xl.font-bold.text-main.mb-20
+.flex.flex-col.items-end.py-15
+    .text-5xl.font-bold.text-main.mb-40
         //- h1.user.leading-10 LAVAC
         FlipDisplay(:value="currentMenu" :num="6" :duration="60")
     NavList(@change="changeMenu")
