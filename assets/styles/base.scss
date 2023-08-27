@@ -1,5 +1,6 @@
 *{
     font-family: 'IBM Plex Sans','Lato', sans-serif;
+    
 }
 .prose{
     max-width: unset !important;
@@ -30,6 +31,10 @@
         animation: scrollbarFadeIn 1s ease 1s forwards;
     }
 }
+::selection {
+    background-color: var(--main-color);
+    color: var(--base-color);
+  }
 @keyframes scrollbarFadeIn{
     0%{
         opacity: 0;

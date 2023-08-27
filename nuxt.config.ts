@@ -3,6 +3,11 @@
 // import Unocss from 'unocss/vite'
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig:{
+    public:{
+      WALINE_SERVER_URL:process.env.WALINE_SERVER_URL
+    }
+  },
   modules: [
     '@unocss/nuxt',
     '@nuxt/content'

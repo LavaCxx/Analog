@@ -6,7 +6,7 @@ title: Test
 category: 测试
 date: '2023-08-13'
 createdOn: 1691933284390
-updatedOn: 1692031788568
+updatedOn: 1693116210842
 ---
 // 复制来的文章
 
@@ -37,3 +37,4 @@ styleMapget('width').value
 styleMapget('width').unit
 // undefined
 ```
+::FriendCard{title="Pantheon" url="https://blog.pantheon.press/"}

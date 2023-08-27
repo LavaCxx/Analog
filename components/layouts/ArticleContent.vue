@@ -8,15 +8,19 @@ main
 
         HR    
         ContentRenderer.prose.prose-slate(:value="doc")
-    Waline( :serverURL="serverURL" :path="routePath" :search="false")
+    Waline(v-bind="walineConfig")
 </template>
 <script lang="ts" setup>
 import { Waline } from '@waline/client/component';
-// import '@waline/client/dist/waline.css';
-const serverURL= process.env.VUE_APP_API_URL;
-const route = useRoute()
+const config =useRuntimeConfig()
 
-console.log('route',route)
-const routePath=computed(() => route.path);
+const route = useRoute()
+const walineConfig=ref({
+    serverURL:config.public.WALINE_SERVER_URL,
+    search:false,
+    path:route.path,
+    emoji:["https://unpkg.com/@waline/emojis@1.2.0/tieba"]
+})
+
 const postPath = route.params.path as Array<string>
 </script>
