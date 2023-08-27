@@ -6,7 +6,7 @@
 </template>
 <script lang="ts" setup>
 interface Props{
-    limit:number
+    limit?:number
 }
 const props=defineProps<Props>();
 const limit=props.limit||3

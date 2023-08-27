@@ -1,6 +1,6 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Unocss from 'unocss/vite'
+// import Unocss from 'unocss/vite'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -17,11 +17,11 @@ export default defineNuxtConfig({
     }
   },
   css: ['@unocss/reset/tailwind.css','@waline/client/dist/waline.css','~/assets/styles/main.scss'],
-  vite: {
-    plugins: [
-      Unocss()
-    ]
-  },
+  // vite: {
+  //   plugins: [
+  //     Unocss()
+  //   ]
+  // },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
