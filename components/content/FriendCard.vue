@@ -1,9 +1,9 @@
 <template lang="pug">
-NuxtLink.p-3.block.cursor-pointer.transition-all.border-l-4.border-sub.flex.gap-x-2(class="hover:bg-desc hover:border-sub" :to="`${url}`" )
+NuxtLink.overflow-hidden.relative.rounded.p-3.block.cursor-pointer.transition-all.flex.flex-col.gap-x-2.bg-desc(class="hover:bg-desc" :to="`${url}`" )
+    .flex.flex-col.font-bold.text-main 
+        h2.text-2xl {{title}}
+        span.text-xl {{description}}
     img.w-20.h-20(v-if="favicon" :src="favicon||''")
-    .flex.flex-col
-        h2.font-bold.text-xl.text-main.italic {{title}}
-        .mt-2 {{description}}
 </template>
 
 <script lang="ts" setup>

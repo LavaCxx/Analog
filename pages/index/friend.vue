@@ -1,5 +1,5 @@
 <template lang='pug'>
-.h-full.grid.grid-cols-2.gap-x-2.gap-y-4.grid-flow-row.auto-rows-auto
+.h-full.grid.grid-cols-3.gap-x-6.gap-y-4.auto-rows-min
     FriendCard(v-for="friend in data" :key="friend._id" v-bind="friend")
 </template>
 

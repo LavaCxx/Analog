@@ -1,6 +1,6 @@
 <template lang="pug">
 .py-15.px-4.overflow-y-auto.border-x-1.border-sub.relative
-    .loading.absolute.top-0.left-0.w-full.h-full.flex.justify-center.items-center(v-show="loading")
+    .loading.absolute.top-0.left-0.w-full.h-full.flex.justify-center.items-center.pointer-events-none(v-show="loading")
     NuxtPage
 </template>
 
@@ -8,16 +8,17 @@
   const nuxtApp = useNuxtApp();
   const loading = ref(false);
   const minLoadingTime = 400;
-  let currentLoadingTime=0
+  let startLoadingTime=0
   nuxtApp.hook("page:start", () => {
     loading.value = true;
-    currentLoadingTime=performance.now()
+    startLoadingTime=performance.now()
   });
   nuxtApp.hook("page:finish", () => {
-    let nextTime=performance.now()+minLoadingTime
-    // setTimeout(()=>{
+    let loadingTime=Math.max(minLoadingTime-performance.now()+startLoadingTime,0)
+    console.log(loadingTime)
+    setTimeout(()=>{
         loading.value = false; 
-    // },nextTime-currentLoadingTime)
+    },loadingTime)
         
   });
 </script>
@@ -29,6 +30,7 @@
         animation: loading .4s linear infinite;
         color:var(--main-color);
         font-size: 3rem;
+        
     }
     @keyframes loading {
         0%{
