@@ -17,6 +17,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.9
     version: 1.11.9
+  node-fetch-native:
+    specifier: ^1.4.0
+    version: 1.4.0
   pug:
     specifier: ^3.0.2
     version: 3.0.2
@@ -3692,9 +3695,9 @@ packages:
     resolution: {integrity: sha512-LyExtJWKxtgVzmgtEHyQtLFpw1KFhQphF9nTG8TpAIVkiI/xQ3FJh75tRFLYl4hkn7BNIIdLJInuDAavX35pMw==}
     dependencies:
       enhanced-resolve: 5.15.0
-      mlly: 1.4.0
+      mlly: 1.4.1
       pathe: 1.1.1
-      ufo: 1.2.0
+      ufo: 1.3.0
     dev: true
 
   /fast-deep-equal@3.1.3:
@@ -3959,7 +3962,7 @@ packages:
       defu: 6.1.2
       https-proxy-agent: 5.0.1
       mri: 1.2.0
-      node-fetch-native: 1.2.0
+      node-fetch-native: 1.4.0
       pathe: 1.1.1
       tar: 6.1.15
     transitivePeerDependencies:
@@ -5734,7 +5737,7 @@ packages:
       mime: 3.0.0
       mlly: 1.4.0
       mri: 1.2.0
-      node-fetch-native: 1.2.0
+      node-fetch-native: 1.4.0
       ofetch: 1.1.1
       ohash: 1.1.3
       openapi-typescript: 6.4.5
@@ -5784,12 +5787,8 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /node-fetch-native@1.2.0:
-    resolution: {integrity: sha512-5IAMBTl9p6PaAjYCnMv5FmqIF6GcZnawAVnzaCG0rX2aYZJ4CxEkZNtVPuTRug7fL7wyM5BQYTlAzcyMPi6oTQ==}
-
   /node-fetch-native@1.4.0:
     resolution: {integrity: sha512-F5kfEj95kX8tkDhUCYdV8dg3/8Olx/94zB8+ZNthFs6Bz31UpUi8Xh40TN3thLwXgrwXry1pEg9lJ++tLWTcqA==}
-    dev: true
 
   /node-fetch@2.6.12:
     resolution: {integrity: sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==}
@@ -6116,7 +6115,7 @@ packages:
     resolution: {integrity: sha512-SSMoktrp9SNLi20BWfB/BnnKcL0RDigXThD/mZBeQxkIRv1xrd9183MtLdsqRYLYSqW0eTr5t8w8MqjNhvoOQQ==}
     dependencies:
       destr: 2.0.1
-      node-fetch-native: 1.2.0
+      node-fetch-native: 1.4.0
       ufo: 1.2.0
 
   /ofetch@1.3.3:
@@ -7842,7 +7841,7 @@ packages:
       consola: 3.2.3
       defu: 6.1.2
       mime: 3.0.0
-      node-fetch-native: 1.2.0
+      node-fetch-native: 1.4.0
       pathe: 1.1.1
     dev: true
 
@@ -8128,7 +8127,7 @@ packages:
       listhen: 1.2.2
       lru-cache: 10.0.1
       mri: 1.2.0
-      node-fetch-native: 1.2.0
+      node-fetch-native: 1.4.0
       ofetch: 1.1.1
       ufo: 1.2.0
     transitivePeerDependencies:
@@ -8238,7 +8237,7 @@ packages:
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
-      mlly: 1.4.0
+      mlly: 1.4.1
       pathe: 1.1.1
       picocolors: 1.0.0
       vite: 4.3.9(@types/node@18.17.3)(sass@1.65.1)
