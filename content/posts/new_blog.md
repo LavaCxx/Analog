@@ -3,6 +3,9 @@ title: 新博客施工记录
 tags:
   - Develop
 category: 测试
+date: '2023-08-28'
+createdOn: 1693210285984
+updatedOn: 1693210285984
 ---
 
 由于还在施工中,本页面先用于测试markdown的渲染.
@@ -30,8 +33,8 @@ ___粗斜体文本___
 + 无序
 + 无序
 
-- [ ] False
-- [x] True
+- [ ] false
+- [x] true
 
 ![MDN](https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg)
 
