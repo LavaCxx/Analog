@@ -13,7 +13,7 @@ NuxtLink.floppy-disk( :to="`${url}`" )
 export interface Props{
     favicon?:string,
     title:string,
-    description?:number,
+    description?:string,
     url:string,
 }
 defineProps<Props>();
