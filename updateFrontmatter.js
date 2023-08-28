@@ -5,7 +5,6 @@ const dayjs = require('dayjs')
 
 const updateFrontmatter = async () => {
   const [, , ...mdFilePaths] = process.argv
-  console.log('mdFilePaths',mdFilePaths)
   mdFilePaths.forEach(async (path) => {
     const file = matter.read(path)
     const { data: currentFrontmatter } = file
