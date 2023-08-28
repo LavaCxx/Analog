@@ -23,8 +23,8 @@
     "@unocss/preset-icons": "^0.55.0",
     "@waline/client": "^2.15.6",
     "gray-matter": "^4.0.3",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "nuxt": "^3.6.5"
   },
   "dependencies": {
