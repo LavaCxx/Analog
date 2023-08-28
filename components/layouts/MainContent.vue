@@ -1,6 +1,6 @@
 <template lang="pug">
-.py-15.px-4.overflow-y-auto.border-x-1.border-sub.relative
-    .loading.absolute.top-0.left-0.w-full.h-full.flex.justify-center.items-center.pointer-events-none(v-show="loading")
+.pt-15.px-4.overflow-y-auto.border-x-1.border-sub.relative
+    .loading.absolute.top-0.left-0.w-full.h-full.flex.justify-center.items-center.pointer-events-none.z-10(v-if="loading")
     NuxtPage
 </template>
 

@@ -1,5 +1,5 @@
 <template lang='pug'>
-.h-full.grid.grid-cols-3.gap-x-6.gap-y-4.auto-rows-min
+.friend-page.h-full.grid.grid-cols-3.gap-x-6.gap-y-8.auto-rows-min.box-border.overflow-y-auto.pb-10
     FriendCard(v-for="friend in data" :key="friend._id" v-bind="friend")
 </template>
 
@@ -10,6 +10,8 @@ const { data, pending, error, refresh } = await useAsyncData(
 )
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.friend-page{
+  perspective: 100px;
+}
 </style>
