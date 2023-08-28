@@ -15,7 +15,6 @@
   });
   nuxtApp.hook("page:finish", () => {
     let loadingTime=Math.max(minLoadingTime-performance.now()+startLoadingTime,0)
-    console.log(loadingTime)
     setTimeout(()=>{
         loading.value = false; 
     },loadingTime)

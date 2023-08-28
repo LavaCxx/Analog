@@ -12,12 +12,6 @@ const currentMenu=ref('abc')
 const changeMenu=(menu:string)=>{
     currentMenu.value=menu
 }
-//  const router = useRouter()
-// onMounted(()=>{
-    
-//     console.log(path.match(/(?<=^\/)[^\/]*/)?.[0]||'home')
-//     changeMenu(path.match(/(?<=^\/)[^\/]*/)?.[0]||'home')
-// })
 </script>
 
 <style lang="scss" scoped>
