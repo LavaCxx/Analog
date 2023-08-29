@@ -37,13 +37,13 @@ onMounted(() => {
 .flip-item {
   display: inline-block;
   position: relative;
-  width: 30px;
-  height: 50px;
-  line-height: 50px;
+  width: 1.6rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
   border: solid 1px #000;
   border-radius: 5px;
   background: #fff;
-  font-size: 30px;
+  font-size: 1.6rem;
   color: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   text-align: center;

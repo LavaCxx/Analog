@@ -5,8 +5,9 @@
 .prose{
     max-width: unset !important;
     // color: var(--main-color);
+    white-space: normal;
     pre{
-        background-color: var(--desc-color);
+        // background-color: var(--desc-color);
         &::-webkit-scrollbar{
             width: 4px;
             height: 4px;
@@ -21,14 +22,17 @@
     &::-webkit-scrollbar{
         width: 4px;
         height: 4px;
+        position: absolute;
+        right: 0;
         // background-color: var(--desc-color);
         opacity: 0;
-        animation: scrollbarFadeIn 1s ease 1s forwards;
+        animation: scrollbarFadeIn 1s ease 1s;
     }
     &::-webkit-scrollbar-thumb{
         opacity: 0;
+
         background-color: var(--sub-color);
-        animation: scrollbarFadeIn 1s ease 1s forwards;
+        animation: scrollbarFadeIn 1s ease 1s;
     }
 }
 ::selection {
@@ -37,10 +41,10 @@
   }
 @keyframes scrollbarFadeIn{
     0%{
-        opacity: 0;
+        visibility: hidden;
     }
     100%{
-        opacity: 1;
+        visibility: visible;
     }
     
 }

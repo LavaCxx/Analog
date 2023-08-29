@@ -43,12 +43,44 @@ export default defineConfig({
         
         ),
         presetTypography({
+            selectorName:'prose',
             cssExtend:{
                 '*':{
+                    color:'var(--main-color)',
+                    'white-space':'normal',
+                },
+                '*::marker':{
                     color:'var(--main-color)'
                 },
+                'code':{
+                    'background-color':'var(--desc-color) !important'
+                },
+                'input[type=checkbox],input[type=radio]':{
+                    // 'background-color':'var(--main-color)'
+                    'appearance':'none'
+                },
+                'hr':{
+                    'border-color':'var(--sub-color)'
+                },
+                'code::before':{
+                    visibility:'hidden'
+                },
+                'code::after':{
+                    visibility:'hidden'
+                },
                 'pre':{
-                    'background-color':'var(--blank-color)'
+                    'background-color':'var(--desc-color) !important'
+                },
+                'tr:nth-child(2n)':{
+                    'background-color':'transparent'
+                },
+                'th':{
+                    // 'background-color':'var(--main-color)',
+                    'color':'var(--main-color)',
+                    'font-size':'1.2rem'
+                },
+                'th,td':{
+                    'border-color':'var(--sub-color)'
                 }
             }
         })

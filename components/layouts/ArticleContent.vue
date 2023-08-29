@@ -7,7 +7,7 @@ main
                 span 发布于 {{doc.date}}
 
         HR    
-        ContentRenderer.prose.prose-slate(:value="doc")
+        ContentRenderer.prose.prose-neutral(:value="doc")
     Waline(v-bind="walineConfig")
 </template>
 <script lang="ts" setup>

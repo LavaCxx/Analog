@@ -5,10 +5,25 @@ tags:
 category: 测试
 date: '2023-08-28'
 createdOn: 1693210285984
-updatedOn: 1693212293555
+updatedOn: 1693330198455
 ---
 
-由于还在施工中,本页面先用于测试markdown的渲染.
+## 本次开发中遇到的问题
+### lint-staged不生效
+本来基于lint-staged自动记录md文件编辑时间的机制突然失效了,一开始想着是版本问题,安装了旧博客上的版本后依然不生效.
+
+过了一阵子后突然又可以了,莫名其妙.
+
+### Cannot find node-fetch-native
+vercel报错,解决办法是给项目下载这一polyfill
+
+## ERR_PNPM_OUTDATED_LOCKFILE
+全信息为: `ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with package.json`,同样是vercel报错,我怀疑跟我改过项目文件夹的权限或者是上面修复lint-staged版本时产生的附带问题.
+尝试删除**pnpm-lock**文件重新生成也无济于事,最后的解决办法是将vercel的build指令指定为`npm build`
+
+
+
+以下部分用于测试markdown的渲染.
 
 # 一号标题
 ## 二号标题
@@ -42,3 +57,9 @@ ___粗斜体文本___
 |  ----  | ----  |
 | 单元格  | 单元格 |
 | 单元格  | 单元格 |
+
+
+
+```javascript
+console.log("hello world")
+```

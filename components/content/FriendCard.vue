@@ -3,6 +3,7 @@
 NuxtLink.floppy-disk( :to="`${url}`" )
     .top-cover
         .top-cover__info  Friend
+            .top-cover__domain {{matchDomain(url)}}
     .label-area
         .label-area__title {{title}}
         .label-area__description {{description}}
@@ -17,13 +18,16 @@ export interface Props{
     url:string,
 }
 defineProps<Props>();
+const matchDomain=(url:string)=>{
+    return url.match(/\.[a-z]*(?=[^.]*$)/)?.[0]||''
+}
 </script>
 <style lang="scss" scoped>
 .floppy-disk{
     width: 100%;
     aspect-ratio: 1/1;
     background-color: var(--base-color);
-    clip-path: polygon(0 0,92% 0,100% 8%, 100% 100%,0 100%);
+    clip-path: polygon(0 0,80% 0,80% 1.5%,82% 1.5%,84% 0, 94% 0, 100% 6%, 100% 100%,0 100%);
     border-radius: 0.2rem;
     box-sizing: border-box;
     // border:.1rem solid var(--sub-color);
@@ -42,8 +46,8 @@ defineProps<Props>();
     }
     &::before,&::after{
         content:'';
-        width: .5rem;
-        height:.5rem;
+        width: 5%;
+        height:5%;
         position: absolute;
         bottom: 4%;
         left: 2.5%;
@@ -63,7 +67,8 @@ defineProps<Props>();
         &__info{
             font-weight: bold;
             margin-left: 21%;
-            width: 75%;
+            // width: 75%;
+            display: block;
             height: 100%;
             background-color: var(--blank-color);
             border-radius: 0 0 .5rem .5rem;
@@ -72,7 +77,7 @@ defineProps<Props>();
             padding:3% 32% 5% 3%; 
             color:var(--main-color);
             position: relative;
-            font-size: .8rem;
+            font-size: 1rem;
             &::after{
                 content:'';
                 position: absolute;
@@ -83,6 +88,14 @@ defineProps<Props>();
                 border-radius: .2rem;
                 background-color: var(--base-color);
             }
+        }
+        &__domain{
+            background-color: var(--main-color);
+            color:var(--blank-color);
+            // display: inline-block;
+            width: min-content;
+            padding:0 .2rem;
+            font-size: 0.8rem;
         }
     }
     .label-area{
@@ -95,7 +108,7 @@ defineProps<Props>();
         padding: 4%;
         background-color: var(--blank-color);
         border-radius: .5rem .5rem 0 0;
-        box-shadow: 0 -0.5rem var(--primary-color) inset, 0 -1rem var(--secondary-color) inset, 0 -1.5rem var(--accent-color) inset;
+        box-shadow: 0 -1rem var(--primary-color) inset, 0 -2rem var(--secondary-color) inset, 0 -3rem var(--accent-color) inset;
         &__title{
             cursor: pointer;
             font-size: 1.25rem;
@@ -111,13 +124,14 @@ defineProps<Props>();
         &__description{
             cursor: pointer;
             margin-top: 0.2rem;
-            font-size: 1rem;
+            font-size: .8rem;
         }
     }
     .icon-up{
         position: absolute;
-        left: 1%;
-        top: 3%;
+        left: 1.25%;
+        top: 2%; 
+        font-size: 1.5rem;
         color:var(--sub-color);
         transform: scaleY(1.3);
     }
