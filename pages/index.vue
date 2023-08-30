@@ -1,6 +1,6 @@
 <template lang="pug">
 .w-full.h-screen.bg-base.rough.overflow-auto
-  .mx-auto.max-w-screen-xl.h-screen.grid.relative(class="grid-cols-1 xl\:grid-cols-[250px_auto] md\:grid-cols-[225px_auto]")
+  .mx-auto.max-w-screen-xl.h-screen.grid.relative(class="grid-cols-1 xl\:grid-cols-[270px_auto] md\:grid-cols-[230px_auto]")
     LeftSide
     MainContent
 </template>

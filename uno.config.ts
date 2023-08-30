@@ -59,14 +59,28 @@ export default defineConfig({
                     // 'background-color':'var(--main-color)'
                     'appearance':'none'
                 },
+                'a':{
+                    'text-decoration':'none'
+                },
+                'p,ul,ol,pre':{
+                    'light-height':'2'
+                },
+                'h1,h2,h3,h4,h5':{
+                    'position':'relative',
+                },
+                'h1:hover::before,h2:hover::before,h3:hover::before,h4:hover::before,h5:hover::before':{
+                    'content':"'#'",
+                    'position':'absolute',
+                    'right':'100%'
+                },
                 'hr':{
                     'border-color':'var(--sub-color)'
                 },
                 'code::before':{
-                    visibility:'hidden'
+                    'visibility':'hidden',
                 },
                 'code::after':{
-                    visibility:'hidden'
+                    'visibility':'hidden'
                 },
                 'pre':{
                     'background-color':'var(--desc-color) !important'

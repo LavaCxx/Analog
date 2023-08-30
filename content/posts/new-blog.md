@@ -5,7 +5,7 @@ tags:
 category: 测试
 date: '2023-08-28'
 createdOn: 1693210285984
-updatedOn: 1693330198455
+updatedOn: 1693405852761
 ---
 
 ## 本次开发中遇到的问题
@@ -17,7 +17,7 @@ updatedOn: 1693330198455
 ### Cannot find node-fetch-native
 vercel报错,解决办法是给项目下载这一polyfill
 
-## ERR_PNPM_OUTDATED_LOCKFILE
+### ERR_PNPM_OUTDATED_LOCKFILE
 全信息为: `ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with package.json`,同样是vercel报错,我怀疑跟我改过项目文件夹的权限或者是上面修复lint-staged版本时产生的附带问题.
 尝试删除**pnpm-lock**文件重新生成也无济于事,最后的解决办法是将vercel的build指令指定为`npm build`
 
