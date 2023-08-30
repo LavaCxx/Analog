@@ -41,7 +41,7 @@ onMounted(() => {
   height: 2.7rem;
   line-height: 2.7rem;
   border: solid 1px #000;
-  border-radius: 5px;
+  border-radius: .4rem;
   background: #fff;
   font-size: 1.6rem;
   color: #fff;

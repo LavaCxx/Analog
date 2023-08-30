@@ -1,6 +1,6 @@
 :root {
-  // --base-color:#cbbca4 ;
-  --base-color:#d3d4cf;
+  --base-color:#cbbca4 ;
+  // --base-color:#d3d4cf;
 
   // --base-color: #f2f0e7;
   --blank-color: #fff6e1;
@@ -14,13 +14,13 @@
   --sub-color: #686253;
 }
 
-:root.dark {
-  --base-color: #1f2937;
-  --blank-color: #2a3748;
-  --primary-color: #627d98;
+.dark {
+  --base-color: #08152d;
+  --blank-color: #2f4b79;
+  --primary-color: #5d9a5a;
   --secondary-color: #768ea6;
-  --accent-color: #7c8e70;
-  --desc-color: #6b6b6b;
-  --main-color: #b0bcc8;
-  --sub-color: #d1d5db;
+  --accent-color: #a083b9;
+  --desc-color: #505050;
+  --main-color: #f5f6f8;
+  --sub-color: #c2c3c4;
 }
