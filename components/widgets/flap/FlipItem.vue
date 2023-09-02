@@ -40,12 +40,12 @@ onMounted(() => {
   width: 1.6rem;
   height: 2.7rem;
   line-height: 2.7rem;
-  border: solid 1px #000;
+  border: solid 1px var(--blank-color);
   border-radius: .4rem;
-  background: #fff;
+  background: var(--main-color);
   font-size: 1.6rem;
-  color: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  color: var(--main-color);
+  box-shadow: 0 0 6px var(--sub-color);
   text-align: center;
   font-family: "Helvetica Neue";
   --duration: 600ms;
@@ -56,7 +56,7 @@ onMounted(() => {
     position: absolute;
     left: 0;
     right: 0;
-    background: #000;
+    background-color: var(--blank-color);
     overflow: hidden;
     box-sizing: border-box;
   }
@@ -64,7 +64,7 @@ onMounted(() => {
     top: 0;
     bottom: 50%;
     border-radius: 5px 5px 0 0;
-    border-bottom: solid 1px #666;
+    border-bottom: 1px solid var(--sub-color);
   }
   &::after {
     top: 50%;
