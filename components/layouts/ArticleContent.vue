@@ -1,10 +1,10 @@
 <template lang="pug">
 main
-    ContentDoc(:path="'/posts/'+postPath" v-slot="{doc}")
+    ContentDoc(:path="postPath" v-slot="{doc}")
         .mb-5
             h1.text-4xl.font-bold.text-main.mb-6 {{doc.title}}
             .grid.text-main
-                span 发布于 {{doc.date}}
+                span 发布于 {{doc.date||'未知'}}
 
         HR    
         ContentRenderer.prose.prose-neutral(:value="doc")
@@ -12,6 +12,9 @@ main
 </template>
 <script lang="ts" setup>
 import { Waline } from '@waline/client/component';
+let props = defineProps<{
+  path?: string;
+}>();
 const config =useRuntimeConfig()
 
 const route = useRoute()
@@ -22,5 +25,6 @@ const walineConfig=ref({
     emoji:["https://unpkg.com/@waline/emojis@1.2.0/tieba"]
 })
 
-const postPath = route.params.path as Array<string>
+const postPath = props.path||route.params.href
+console.log('postPath',postPath,route)
 </script>

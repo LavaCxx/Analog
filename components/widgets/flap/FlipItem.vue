@@ -41,11 +41,11 @@ onMounted(() => {
   height: 2.7rem;
   line-height: 2.7rem;
   border: solid 1px var(--blank-color);
-  border-radius: .4rem;
+  border-radius: .2rem;
   background: var(--main-color);
   font-size: 1.6rem;
   color: var(--main-color);
-  box-shadow: 0 0 6px var(--sub-color);
+  box-shadow: 0 0 .1rem var(--sub-color);
   text-align: center;
   font-family: "Helvetica Neue";
   --duration: 600ms;
@@ -63,13 +63,13 @@ onMounted(() => {
   &::before {
     top: 0;
     bottom: 50%;
-    border-radius: 5px 5px 0 0;
+    border-radius: .2rem .2rem 0 0;
     border-bottom: 1px solid var(--sub-color);
   }
   &::after {
     top: 50%;
     bottom: 0;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 .2rem .2rem;
     line-height: 0;
   }
 }

@@ -58,10 +58,12 @@ export default defineConfig({
                 },
                 'input[type=checkbox],input[type=radio]':{
                     // 'background-color':'var(--main-color)'
-                    'appearance':'none'
+                    // 'appearance':'none'
                 },
                 'a':{
-                    'text-decoration':'none'
+                    'text-decoration':'none',
+                    'margin':'0 0.2rem',
+                    'font-weight':'bold'
                 },
                 'p,ul,ol,pre':{
                     'light-height':'1 !important'
@@ -69,12 +71,16 @@ export default defineConfig({
                 'strong':{
                     // 'margin':'0 0.2rem'
                 },
+                'blockquote':{
+                    'border-color':'var(--main-color)'
+                },
                 'h1,h2,h3,h4,h5':{
                     'position':'relative',
                     'font-weight':'bold'
                 },
                 'h1 a,h2 a,h3 a,h4 a,h5 a':{
-                    'font-weight':'bold'
+                    'font-weight':'bold',
+                    'margin':'0'
                 },
                 'h1:hover::before,h2:hover::before,h3:hover::before,h4:hover::before,h5:hover::before':{
                     'content':"'#'",
