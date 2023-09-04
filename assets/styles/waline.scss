@@ -14,8 +14,8 @@
     /* 布局颜色 */
     --waline-color: var(--main-color);
     --waline-bgcolor: var(--base-color);
-    --waline-bgcolor-light: var(--base-color);
-    --waline-bgcolor-hover: var(--base-color);
+    --waline-bgcolor-light: transparent;
+    --waline-bgcolor-hover: transparent;
     --waline-border-color: var(--sub-color);
     --waline-disable-bgcolor: var(--sub-color);
     --waline-disable-color: var(--blank-color);

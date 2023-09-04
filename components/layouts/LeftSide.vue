@@ -7,8 +7,7 @@
     .flex
         ThemeSwitch
     .w-screen.flex.h-12.px-2.box-border.items-center.bg-desc.absolute.left-full.top-0.backdrop-blur-sm(class="md\:hidden")
-        .i-mdi-menu.text-2xl(@click="toggleMenu")
-    
+        .i-mdi-menu.text-2xl(@click="toggleMenu") 
 </template>
 
 <script lang="ts" setup>

@@ -8,23 +8,13 @@ main
 
         HR    
         ContentRenderer.prose.prose-neutral(:value="doc")
-    Waline(v-bind="walineConfig")
+    Waline 
 </template>
 <script lang="ts" setup>
-import { Waline } from '@waline/client/component';
 let props = defineProps<{
   path?: string;
 }>();
-const config =useRuntimeConfig()
 
 const route = useRoute()
-const walineConfig=ref({
-    serverURL:config.public.WALINE_SERVER_URL,
-    search:false,
-    path:route.path,
-    emoji:["https://unpkg.com/@waline/emojis@1.2.0/tieba"]
-})
-
 const postPath = props.path||route.params.href
-console.log('postPath',postPath,route)
 </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-p 施工中...
+p.text-main 施工中...
 </template>
 
 <script>
