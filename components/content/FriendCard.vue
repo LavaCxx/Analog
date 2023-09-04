@@ -106,6 +106,7 @@ const matchDomain=(url:string)=>{
         box-sizing: border-box;
         line-height: 1rem;
         padding: 4%;
+        color:var(--main-color);
         background-color: var(--blank-color);
         border-radius: .5rem .5rem 0 0;
         box-shadow: 0 -1rem var(--primary-color) inset, 0 -2rem var(--secondary-color) inset, 0 -3rem var(--accent-color) inset;
@@ -120,6 +121,7 @@ const matchDomain=(url:string)=>{
             display: inline-block;
             line-height: 1.75rem;
             transition: 0.2s all;
+
         }
         &__description{
             cursor: pointer;

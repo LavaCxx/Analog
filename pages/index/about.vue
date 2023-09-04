@@ -1,6 +1,5 @@
 <template lang="pug">
-.h-full
-    ContentDoc(path="/about")
+ArticleContent(path="/about")
 </template>
 
 <script setup lang="ts">
