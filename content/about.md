@@ -5,7 +5,7 @@ tags:
 category: 文章
 date: '2023-09-04'
 createdOn: 1693758711222
-updatedOn: 1693758711222
+updatedOn: 1693793568836
 ---
 
 ### 关于LavaC
@@ -27,4 +27,4 @@ updatedOn: 1693758711222
 
 ---
 ### 关于博客
-有一说一，配色上我更喜欢[2022版](https://lavace.vercel.app/home)，但是又不想新版的和老版有太多相似之处。
+有一说一，配色上我更喜欢[2022版](https://lavace.vercel.app/home)。

@@ -18,7 +18,7 @@
     --waline-bgcolor-hover: var(--base-color);
     --waline-border-color: var(--sub-color);
     --waline-disable-bgcolor: var(--sub-color);
-    --waline-disable-color: var(--sub-color);
+    --waline-disable-color: var(--blank-color);
     --waline-code-bgcolor: var(--desc-color);
   
     /* 特殊颜色 */
@@ -29,8 +29,8 @@
     --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
   
     /* 徽章 */
-    --waline-badge-color: var(--secondary-color);
-    --waline-badge-font-size: 0.775rem;
+    --waline-badge-color: var(--main-color);
+    --waline-badge-font-size: 0.75rem;
   
     /* 信息 */
     --waline-info-bgcolor: var(--base-color);
