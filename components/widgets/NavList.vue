@@ -10,7 +10,7 @@
       @click="navigate(index)"
       :class="[currentPageIndex===index&&'text-main']"
     )
-      NuxtLink(:to="item.link") {{ item.title }}
+      NuxtLink.w-full.inline-block(:to="item.link") {{ item.title }}
 </template>
 <script lang="ts" setup>
 const scaleBar=ref();
