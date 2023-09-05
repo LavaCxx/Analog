@@ -11,10 +11,15 @@ main
     Waline 
 </template>
 <script lang="ts" setup>
+// import Prism from 'prismjs'
 let props = defineProps<{
   path?: string;
 }>();
 
 const route = useRoute()
 const postPath = props.path||route.params.href
+// onMounted(async()=>{
+//     await nextTick()
+//     Prism.highlightAll()
+// })
 </script>

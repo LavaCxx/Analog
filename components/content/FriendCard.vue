@@ -133,7 +133,7 @@ const matchDomain=(url:string)=>{
         position: absolute;
         left: 1.25%;
         top: 2%; 
-        font-size: 1.5rem;
+        font-size: min(4vw,1.5rem);
         color:var(--sub-color);
         transform: scaleY(1.3);
     }

@@ -1,6 +1,7 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import Unocss from 'unocss/vite'
+// import prismjs from 'vite-plugin-prismjs'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig:{
@@ -22,11 +23,18 @@ export default defineNuxtConfig({
     }
   },
   css: ['@unocss/reset/tailwind.css','@waline/client/dist/waline.css','~/assets/styles/main.scss'],
-  // vite: {
-  //   plugins: [
-  //     Unocss()
-  //   ]
-  // },
+  vite: {
+    // plugins: [
+    //   prismjs({
+    //     languages:[
+    //       'bash','sql','html','css','json','md','ts','javascript','scss','sass','shell'
+    //     ],
+    //     plugins:['toolbar','show-language','copy-to-clipboard'],
+    //     theme: "tomorrow",
+    //     css:true
+    //   }),
+    // ]
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head:{
