@@ -2,7 +2,7 @@
 .h-full.rough.flex.flex-col.justify-between.items-end.py-15.bg-base.px-4.box-border.fixed.z-10.top-0.transition-all(:class="['md\:relative','md\:translate-x-0',showMenu?'translate-x-0':'translate-x-[-100%]']")
     .text-5xl.font-bold.text-main
         //- h1.user.leading-10 LAVAC
-        FlipDisplay(:value="currentMenu" :num="6" :duration="60")
+        FlipDisplay(:value="currentMenu" :num="6" :duration="55")
     NavList(@change="changeMenu")
     .flex
         ThemeSwitch

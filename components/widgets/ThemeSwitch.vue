@@ -45,6 +45,7 @@ const toggleClass=()=>{
   ::view-transition-new(root) {
     animation: none;
     mix-blend-mode: normal;
+    cursor: progress;
   }
 
   .dark::view-transition-old(root) {
