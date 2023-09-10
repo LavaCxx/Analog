@@ -52,10 +52,7 @@ export default defineConfig({
                 '*::marker':{
                     color:'var(--main-color)'
                 },
-                'code':{
-                    'background-color':'var(--desc-color)',
-                    // 'margin':'0 0.25rem'
-                },
+
                 'input[type=checkbox],input[type=radio]':{
                     // 'background-color':'var(--main-color)'
                     // 'appearance':'none'
@@ -90,11 +87,18 @@ export default defineConfig({
                 'hr':{
                     'border-color':'var(--sub-color)'
                 },
+                'code':{
+                    'background-color':'var(--desc-color) !important',
+                },
+                'h1 code,h2 code,h3 code,p code,span code':{
+                    'margin':'0 0.25rem',
+                    'padding':'0 0.25rem'
+                },
                 'code::before':{
-                    'visibility':'hidden',
+                    'display':'none',
                 },
                 'code::after':{
-                    'visibility':'hidden'
+                    'display':'none'
                 },
                 'pre':{
                     'background-color':'var(--desc-color) !important'

@@ -6,7 +6,8 @@
 <script lang="ts" setup>
 const { data, pending, error, refresh } = await useAsyncData(
   'posts',
-  () => queryContent('/posts').find()
+  () => queryContent('/posts').where({incomplete:{$ne:true}}).find()
 )
+console.log('data',data)
 
 </script>
