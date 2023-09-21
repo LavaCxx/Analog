@@ -4,14 +4,14 @@ tags:
   - Develop
 date: '2023-09-21'
 createdOn: 1695271599728
-updatedOn: 1695271599728
+updatedOn: 1695285809541
 ---
 最近我开始尝试用**NeoVim**替代VsCode开发，在摸索了几天配置并实际在工作中使用后体感还不错，但仍有一个小问题如鲠在喉：.vue文件的`<style>`块缺少代码提示。
 ### 尝试
 经过一段搜索后有说缺少`Treesitter`的Vue解析模块的，也有说`Mason`缺少相应LSP的，在重新把这两个插件中涉及到的相关模块都下了一遍后仍没有解决问题。
 在郁闷了一天后突然想到怎么忘了AI代码提示这玩意，于是便去了看了下常用的代码提示器[codeium](https://codeium.com/)有没有支持NeoVim，结果是令人欣喜的，codeium几乎支持所有的编辑器，妙。
 
-[codeium支持的编辑器](https://imgse.com/i/pPIM8ht)
+[![codeium支持的编辑器](https://z1.ax1x.com/2023/09/21/pPIM8ht.md.jpg)](https://imgse.com/i/pPIM8ht)
 
 ```lua
 {
