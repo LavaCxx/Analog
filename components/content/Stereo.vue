@@ -1,7 +1,7 @@
 <template lang="pug">
 .w-full.flex.flex-col.items-center.gap-y-2
     .w-100.h-50.bg-base.relative.mx-auto.plaid(ref="container")
-        .absolute.bg-primary.aspect-square.rounded-full(:class="['translate-x--1/2','translate-y--1/2','w-'+checkSize]" :style="{left:listenerLoc.x+'px',top:listenerLoc.y+'px'}")
+        .absolute.w-5.h-5.bg-primary.aspect-square.rounded-full(:class="['translate-x--1/2','translate-y--1/2']" :style="{left:listenerLoc.x+'px',top:listenerLoc.y+'px'}")
         .absolute.w-3.h-3.rounded-full(:class="['translate-x--1/2','translate-y--1/2',isWin&&'bg-secondary']" :style="{left:targetLoc.x+'px',top:targetLoc.y+'px'}")
     button.bg-main.text-blank.px-2(@click="togglePlay") {{isPlay?'Reset':'Start'}}
     p ↑↓←→控制方向，空格键确认目标
@@ -62,7 +62,7 @@ const setRandomLoc = () => {
   targetLoc.value = {
     x: getRandomNum(20, clientWidth - 20),
     y: getRandomNum(20, clientHeight - 20),
-  };
+  }; 
 };
 const initAudio = () => {
   if (!audioCtx || !oscillator || !panner || !listener || !gainNode) return;

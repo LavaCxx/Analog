@@ -1,11 +1,10 @@
 ---
 title: Web Can Do This - JS实现立体声模拟
-incomplete: true
 tags:
   - Develop
 date: '2023-09-11'
 createdOn: 1694365036642
-updatedOn: 1694365036642
+updatedOn: 1695271599730
 ---
 
 ## 前言
@@ -40,8 +39,20 @@ oscillator.type = "sine"
 // 调整音高
 oscillator.frequency = 440
 // 调整音量
-gainNode.gain.value = 1
+// gainNode.gain.value = 1
+// currentTime是每个AudioContext的独有时间轴
+gainNode.gain.linearRampToValueAtTime(1,audioCtx.currentTime)
+gainNode.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+1)
+// 连接节点和发声设备
+oscillator.connect(gainNode)
+gainNode.connect(audioCtx.destination)
+// 发声
+oscillator.start()
 ```
 
+
+## PannerNode
+进入正题,要想实现立体声，我们就需要`OscillatorNode`和`GainNode`之间的第三个节点`PannerNode`，这个节点可以控制声源于接收者之间的位置和衰减等参数，最后我们得到了这么一个声音路径图。
+[![audio-routing-graph](https://z1.ax1x.com/2023/09/14/pPRtcAs.md.png)](https://imgse.com/i/pPRtcAs)
 ## Demo
 ::Stereo
