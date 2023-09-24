@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/nvim-learn.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/nvim-learn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/nvim-learn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/nvim-codeium.md"
+                "file": "posts/nvim-learn.md"
               }
             }
           },
@@ -158,9 +158,9 @@
   },
   "active": "960336dfd75a35e1",
   "lastOpenFiles": [
+    "posts/nvim-codeium.md",
     "posts/nvim-learn.md",
     "posts/new-blog.md",
-    "posts/nvim-codeium.md",
     "posts/stereo-sound.md"
   ]
 }

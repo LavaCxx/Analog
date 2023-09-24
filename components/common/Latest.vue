@@ -12,7 +12,7 @@ const props=defineProps<Props>();
 const limit=props.limit||3
 const { data, pending, error, refresh } = await useAsyncData(
   'posts',
-  () => queryContent('/posts').where({incomplete:{$ne:true}}).find()
+  () => queryContent('/posts').where({incomplete:{$ne:true}}).sort({createdOn:-1}).find()
 )
 data.value=(data.value||[]).slice(0,3)
 </script>

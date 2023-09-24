@@ -4,14 +4,15 @@
 // import prismjs from 'vite-plugin-prismjs'
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  runtimeConfig:{
-    public:{
-      WALINE_SERVER_URL:process.env.WALINE_SERVER_URL
+  runtimeConfig: {
+    public: {
+      WALINE_SERVER_URL: process.env.WALINE_SERVER_URL
     }
   },
   modules: [
     '@unocss/nuxt',
-    '@nuxt/content'
+    '@nuxt/content',
+    'dayjs-nuxt'
   ],
   content: {
     highlight: {
@@ -22,7 +23,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['@unocss/reset/tailwind.css','@waline/client/dist/waline.css','~/assets/styles/main.scss'],
+  css: ['@unocss/reset/tailwind.css', '@waline/client/dist/waline.css', '~/assets/styles/main.scss'],
   vite: {
     // plugins: [
     //   prismjs({
@@ -37,10 +38,10 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
-    head:{
-      title:'LavaCx',
-      link:[
-        {rel:'icon',type:'image/x-icon',href:'favicon.ico'}
+    head: {
+      title: 'LavaCx',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
       ]
     }
   },

@@ -23,6 +23,7 @@
     "@unocss/extractor-pug": "^0.55.0",
     "@unocss/preset-icons": "^0.55.0",
     "@waline/client": "^2.15.6",
+    "dayjs-nuxt": "^1.1.2",
     "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
