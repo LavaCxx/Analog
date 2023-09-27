@@ -42,6 +42,14 @@ export default defineNuxtConfig({
       title: 'LavaCx',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+      ],
+      script: [
+        {
+          src: 'https://umami.lavac.cc/umami.js',
+          async: true,
+          defer: true,
+          'data-website-id': '1396997f-d7d2-4bef-8e0c-11ab1074355c'
+        }
       ]
     }
   },
