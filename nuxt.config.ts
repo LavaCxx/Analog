@@ -45,7 +45,7 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://umami.lavac.cc/umami.js',
+          src: 'https://umami.lavac.cc/script.js',
           async: true,
           defer: true,
           'data-website-id': '80dbf1fa-b47e-429d-9846-5684097fc7a9'
