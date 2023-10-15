@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "79410dcf4f75dc94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/new-blog.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/nvim-learn.md",
+                "file": "posts/new-blog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/nvim-learn.md",
+                "file": "posts/new-blog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/nvim-learn.md"
+                "file": "posts/new-blog.md"
               }
             }
           },
@@ -156,11 +169,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "960336dfd75a35e1",
+  "active": "79410dcf4f75dc94",
   "lastOpenFiles": [
+    "posts/lazygit-started.md",
+    "posts/new-blog.md",
     "posts/nvim-codeium.md",
     "posts/nvim-learn.md",
-    "posts/new-blog.md",
     "posts/stereo-sound.md"
   ]
 }

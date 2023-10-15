@@ -1,7 +1,8 @@
 <template lang="pug">
-.flex.flex-col.items-center.text-center.gap-x-2.select-none.relative.cursor-pointer(@click="toggleTheme")
-    .w-20.text-main.border-2.border-sub.px-2 {{isDark?'Dark':'Light'}}
-    //- .test
+<!-- .flex.flex-col.items-center.text-center.gap-x-2.select-none.relative.cursor-pointer(@click="toggleTheme") -->
+<!--     .w-20.text-main.border-2.border-sub.px-2 {{isDark?'Dark':'Light'}} -->
+<!--     //- .toDateString(); -->
+.text-6xl.text-main.cursor-pointer.origin-center(:class="isDark?'i-mdi-electric-switch':'i-mdi-electric-switch-closed'" @click="toggleTheme")
 </template>
 
 <script lang="ts" setup>
