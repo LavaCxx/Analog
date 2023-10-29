@@ -5,14 +5,14 @@ tags:
 category: 测试
 date: '2023-08-28'
 createdOn: 1693210285984
-updatedOn: 1693758711226
+updatedOn: 1698555381864
 ---
 ### TodoList
 - [x] Home
 - [x] Post
 - [ ] Memo：计划使用github或者notion管理数据（考虑放弃设置Memo页，毕竟大概率不会用）
 - [x] Friend：样式还在想
-- [ ] About：样式和文章都在想
+- [x] About：样式和文章都在想
 - [ ] Markdown：Prose的样式还差点意思，考虑要么换掉要么改改
 - [x] Waline
 - [x] 组件：主题转换，时间/天气？

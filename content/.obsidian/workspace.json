@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "79410dcf4f75dc94",
+            "id": "53ff2e8a2d45c354",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/new-blog.md",
+                "file": "posts/summer-2023.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/new-blog.md",
+                "file": "posts/summer-2023.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/new-blog.md",
+                "file": "posts/summer-2023.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/new-blog.md"
+                "file": "posts/summer-2023.md"
               }
             }
           },
@@ -169,12 +169,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "79410dcf4f75dc94",
+  "active": "53ff2e8a2d45c354",
   "lastOpenFiles": [
-    "posts/lazygit-started.md",
+    "posts/stereo-sound.md",
+    "posts/nvim-learn.md",
     "posts/new-blog.md",
     "posts/nvim-codeium.md",
-    "posts/nvim-learn.md",
-    "posts/stereo-sound.md"
+    "posts/nvim-lazygit.md",
+    "posts/summer-2023.md",
+    "Pasted image 20231022130149.png",
+    "posts/lazygit-started.md"
   ]
 }
