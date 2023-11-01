@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/summer-2023.md",
+                "file": "posts/nvim-codeium.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/summer-2023.md",
+                "file": "posts/nvim-codeium.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/summer-2023.md",
+                "file": "posts/nvim-codeium.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/summer-2023.md"
+                "file": "posts/nvim-codeium.md"
               }
             }
           },
@@ -151,13 +151,21 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "e065792494c8dae9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,17 +174,19 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "53ff2e8a2d45c354",
   "lastOpenFiles": [
+    "posts/note-taking.md",
+    "posts/nvim-codeium.md",
+    "posts/summer-2023.md",
     "posts/stereo-sound.md",
     "posts/nvim-learn.md",
     "posts/new-blog.md",
-    "posts/nvim-codeium.md",
     "posts/nvim-lazygit.md",
-    "posts/summer-2023.md",
     "Pasted image 20231022130149.png",
     "posts/lazygit-started.md"
   ]

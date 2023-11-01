@@ -6,8 +6,8 @@ NuxtLink.floppy-disk( :to="`${url}`" )
             .top-cover__domain {{matchDomain(url)}}
     .label-area
         .label-area__title {{title}}
-        .label-area__description {{description}}
-        img.label-area__favicon(:src="favicon" v-if="favicon")
+        .label-area__description(class="hidden md:block") {{description}}
+        img.label-area__favicon(class="hidden md:block" :src="favicon" v-if="favicon")
     .icon-up.i-mdi-arrow-up-bold
 </template>
 
@@ -122,12 +122,12 @@ const matchDomain = (url: string) => {
     background-color: var(--blank-color);
     border-radius: 0.5rem 0.5rem 0 0;
     box-shadow:
-      0 -1rem var(--primary-color) inset,
-      0 -2rem var(--secondary-color) inset,
-      0 -3rem var(--accent-color) inset;
+      0 -2vmin var(--primary-color) inset,
+      0 -4vmin var(--secondary-color) inset,
+      0 -6vmin var(--accent-color) inset;
     position: relative;
-    padding-bottom:3rem;
-    box-sizing:border-box;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
     &__title {
       cursor: pointer;
       font-size: 1.25rem;
@@ -152,7 +152,7 @@ const matchDomain = (url: string) => {
     &__favicon {
       width: 35%;
       aspect-ratio: 1/1;
-      margin-top:0.2rem;
+      margin-top: 0.2rem;
       border: 0.1rem solid var(--main-color);
     }
   }
