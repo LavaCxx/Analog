@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/after-ezmark.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/after-ezmark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/nvim-codeium.md",
+                "file": "posts/after-ezmark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/nvim-codeium.md"
+                "file": "posts/after-ezmark.md"
               }
             }
           },
@@ -165,7 +165,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,12 +181,14 @@
   },
   "active": "53ff2e8a2d45c354",
   "lastOpenFiles": [
-    "posts/note-taking.md",
+    "posts/new-blog.md",
+    "posts/after-ezmark.md",
     "posts/nvim-codeium.md",
+    "posts/未命名",
+    "posts/note-taking.md",
     "posts/summer-2023.md",
     "posts/stereo-sound.md",
     "posts/nvim-learn.md",
-    "posts/new-blog.md",
     "posts/nvim-lazygit.md",
     "Pasted image 20231022130149.png",
     "posts/lazygit-started.md"
