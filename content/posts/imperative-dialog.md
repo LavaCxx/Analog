@@ -4,9 +4,10 @@ tags:
   - Develop
 date: '2024-01-05'
 createdOn: 1704435225205
-updatedOn: 1704435841463
+updatedOn: 1704438299030
 ---
-几个月前在逛xLog看到这么一篇innei的一篇[文章](https://innei.in/posts/programming/why-i-prefer-imperative-modal)给了我比较大的启发，虽然我很少用Modal，但是Dialog在工作上倒是经常在用，能不能把同样的思路也应用到Dialog上呢？于是我遍进行了一番探索。
+几个月前在逛xLog看到这么一篇innei的一篇[文章](https://innei.in/posts/programming/why-i-prefer-imperative-modal)给了我比较大的启发。
+虽然我很少用Modal，但是Dialog在工作上倒是经常在用，能不能把同样的思路也应用到Dialog上呢？于是我进行了一番探索。
 
 > 为什么去年做的事现在才说（~~这不是想水一篇文章么~~），主要也是因为几个月工作用下来还挺稳没什么问题，也该拿出来分享了。
 
@@ -53,7 +54,7 @@ updatedOn: 1704435841463
 ## How
 由于Dialog的结构远比Modal复杂，这里是不能套用innei的方法来做的，先总结一下需求：
 - Dialog代码尽量保持不变；
-- 调用Dialog的页面里只需要一个方法就能实现调用Dialog，无需其它状态变量或事件函数；
+- 页面里只需要一个方法就能实现调用，无需其它状态变量或事件函数；
 - 要能随用随生成，不用时销毁就更好了。
 > 第三点相当重要，在给Dialog传不同的值时经常需要根据这些新值做额外的操作，在老的Dialog调用方法中因为Dialog在页面初始化后就一直存在，往往需要监听`data`或`visible`的状态来判断，相当麻烦。
 
@@ -64,7 +65,7 @@ export function DialogImpl(component) {
 	const CompConstructor = Vue.extend(component);
 	const compInstance = new CompContructor().$mount();
 
-	documnet.body.appendChild(compInstance.$el)
+	documnet.body.appendChild(compInstance.$el);
 }
 ```
 这样一来，只要把组件放进去就能创建出实例挂载到`body`上，接下来再完善一下事件监听和销毁。
@@ -72,6 +73,7 @@ export function DialogImpl(component) {
 export function DialogImpl(component, data) {
 	const CompConstructor = Vue.extend(component);
 	const compInstance = new CompContructor().$mount();
+	
 	// 因为每个Dialog在业务上可能各有不同，传值方面我个人的做法是当Dialog实例时自动执行一个init函数。
 	compInstance.$options.init(deepClone(data));
 
@@ -84,11 +86,11 @@ export function DialogImpl(component, data) {
 	return new Promise((resolve, reject)) => {
 		compInstance.$on('confirm', (res) => {
 			destoryComp(compInstance);
-			resolve(res)
+			resolve(res);
 		});
 		compInstance.$on('close', (res) => {
 			destoryComp(compInstance);
-			reject()
+			reject();
 		})
 	}
 }
@@ -112,10 +114,6 @@ const compInstance = new CompContructor({ store }).$mount();
 <script>
 	import FooDialog from '../FooDialog.vue'
 	export default {
-		data() {
-			return {
-			}
-		},
 		methods: {
 			show(data) {
 				this.DialogImpl(FooDialog, data).then(res => {
