@@ -46,8 +46,7 @@ export default defineConfig({
             selectorName:'prose',
             cssExtend:{
                 '*':{
-                    color:'var(--main-color)',
-                    'white-space':'normal',
+                    color:'var(--main-color)'
                 },
                 '*::marker':{
                     color:'var(--main-color)'

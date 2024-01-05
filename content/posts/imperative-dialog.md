@@ -1,10 +1,10 @@
 ---
-title: 命令式弹窗调用与踩坑
+title: 简单实现一个命令式弹窗调用
 tags:
   - Develop
 date: '2024-01-05'
 createdOn: 1704435225205
-updatedOn: 1704435225205
+updatedOn: 1704435841463
 ---
 几个月前在逛xLog看到这么一篇innei的一篇[文章](https://innei.in/posts/programming/why-i-prefer-imperative-modal)给了我比较大的启发，虽然我很少用Modal，但是Dialog在工作上倒是经常在用，能不能把同样的思路也应用到Dialog上呢？于是我遍进行了一番探索。
 
@@ -94,6 +94,7 @@ export function DialogImpl(component, data) {
 }
 ```
 **补充**
+
 在经过一段时间的使用后发现`extend`出来的实例化对象并没有被挂载上VueX，因此还需要完善以上代码。
 ```js
 import store from '@/store'
