@@ -22,7 +22,6 @@ let targetList=props.value.split('').map(v=>letterList.findIndex(letter=>letter=
 // 数组对比
 const compareArray=(a:number[],b:number[])=>{
     let changeList:number[]=[]
-    let leftNum=b.length-a.length
     for(let i=0;i<a.length;i++){
         if(a[i]!==b[i]) changeList.push(i)
     }
@@ -38,7 +37,6 @@ watch(()=>props.value, (newVal)=>{
     if(targetList.length<props.num){
         targetList=[...new Array(props.num-targetList.length).fill(0),...targetList]
     }
-    console.log('targetList',targetList)
 })
 onMounted(()=>{
     setInterval(()=>{

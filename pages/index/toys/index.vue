@@ -1,5 +1,5 @@
 <template lang="pug">
-p.text-main 施工中...
+p.text-main 这样式能想一万年
 </template>
 
 <script>

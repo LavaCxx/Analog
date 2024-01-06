@@ -12,7 +12,6 @@ definePageMeta({
     mode: 'out-in'
   },
   middleware: 'transition'
-  
   // or middleware: 'auth'
 })
 

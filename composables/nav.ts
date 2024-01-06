@@ -10,8 +10,8 @@ export const useNav=()=>{
               link: "/posts",
             },
             {
-              title: "Memo",
-              link: "/memos",
+              title: "Toy",
+              link: "/toys",
             },
             {
               title: "Friend",

@@ -5,6 +5,9 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({
+    keepalive: true//设置为keepAlive
+})
 const nuxtApp = useNuxtApp();
 const loading = ref(false);
 const minLoadingTime = 400;
